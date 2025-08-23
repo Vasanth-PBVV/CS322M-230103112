@@ -1,0 +1,125 @@
+$date
+	Tue Aug 19 11:53:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_link_top $end
+$var wire 1 ! done $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 1 $ req $end
+$var wire 8 % last_byte [7:0] $end
+$var wire 1 ! done $end
+$var wire 8 & data [7:0] $end
+$var wire 1 ' ack $end
+$scope module master_inst $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 1 ' ack $end
+$var parameter 3 ( DONE_PULSE $end
+$var parameter 3 ) DROP_REQ $end
+$var parameter 3 * IDLE $end
+$var parameter 3 + SEND_REQ $end
+$var parameter 3 , WAIT_ACK1 $end
+$var parameter 3 - WAIT_ACK2 $end
+$var reg 2 . byte_idx [1:0] $end
+$var reg 8 / data [7:0] $end
+$var reg 1 ! done $end
+$var reg 2 0 next_byte_idx [1:0] $end
+$var reg 3 1 next_state [2:0] $end
+$var reg 1 $ req $end
+$var reg 3 2 state [2:0] $end
+$upscope $end
+$scope module slave_inst $end
+$var wire 1 " clk $end
+$var wire 8 3 data_in [7:0] $end
+$var wire 1 $ req $end
+$var wire 1 # rst $end
+$var parameter 2 4 DROPACK $end
+$var parameter 2 5 HOLDACK $end
+$var parameter 2 6 IDLE $end
+$var parameter 2 7 LATCH $end
+$var reg 1 ' ack $end
+$var reg 1 8 ack_count $end
+$var reg 8 9 last_byte [7:0] $end
+$var reg 1 : next_ack_count $end
+$var reg 2 ; next_state [1:0] $end
+$var reg 2 < state [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 7
+b0 6
+b10 5
+b11 4
+b11 -
+b10 ,
+b1 +
+b0 *
+b100 )
+b101 (
+$end
+#0
+$dumpvars
+bx <
+b0 ;
+x:
+bx 9
+x8
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+0'
+bx &
+bx %
+0$
+1#
+0"
+0!
+$end
+#5000
+b10100000 &
+b10100000 /
+b10100000 3
+b0 0
+b1 1
+0:
+b0 .
+b0 2
+b0 %
+b0 9
+08
+b0 <
+1"
+#10000
+0"
+#15000
+1"
+#20000
+0"
+#25000
+1"
+#30000
+0"
+0#
+#35000
+b1 ;
+1$
+b1 2
+1"
+#40000
+0"
+#45000
