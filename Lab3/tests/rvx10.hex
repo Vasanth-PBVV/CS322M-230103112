@@ -1,0 +1,41 @@
+# tests/rvx10.hex - RVX10 Instruction Test Program in Hex
+
+# Each line: 32-bit instruction hex code (little-endian or big-endian depending on simulator)
+# Address increments by 4 bytes per instruction
+# Comments describe the instruction
+
+# ANDN x5, x6, x7
+00: 0073030B   # funct7=0000000, rs2=7, rs1=6, funct3=000, rd=5, opcode=0x0B
+
+# ORN x8, x9, x10
+04: 00A4890B   # funct7=0000000, rs2=10, rs1=9, funct3=001, rd=8, opcode=0x0B
+
+# XNOR x11, x12, x13
+08: 00D60A0B   # funct7=0000000, rs2=13, rs1=12, funct3=010, rd=11, opcode=0x0B
+
+# MIN x14, x15, x16
+0C: 0107818B   # funct7=0000001, rs2=16, rs1=15, funct3=000, rd=14, opcode=0x0B
+
+# MAX x17, x18, x19
+10: 0139139B   # funct7=0000001, rs2=19, rs1=18, funct3=001, rd=17, opcode=0x0B
+
+# MINU x20, x21, x22
+14: 016A1A1B   # funct7=0000001, rs2=22, rs1=21, funct3=010, rd=20, opcode=0x0B
+
+# MAXU x23, x24, x25
+18: 019B252B   # funct7=0000001, rs2=25, rs1=24, funct3=011, rd=23, opcode=0x0B
+
+# ROL x26, x27, x28
+1C: 01CCE32B   # funct7=0000010, rs2=28, rs1=27, funct3=000, rd=26, opcode=0x0B
+
+# ROR x29, x30, x31
+20: 01FF0D3B   # funct7=0000010, rs2=31, rs1=30, funct3=001, rd=29, opcode=0x0B
+
+# ABS x1, x2, x0 (rs2 ignored)
+24: 0001403B   # funct7=0000011, rs2=0, rs1=2, funct3=000, rd=1, opcode=0x0B
+
+# Store the value 25 to memory address 100 for pass detection
+28: 01902823   # sw x25, 100(x0) (store from x25 to addr 100)
+
+# Infinite loop (or end)
+2C: FFF0006F   # jal x0, -4 (loop)
